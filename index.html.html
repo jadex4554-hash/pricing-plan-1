@@ -1,0 +1,222 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pricing Plan</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
+
+    body {
+      background: #333745;
+      color: #fff;
+      font-family: "Open Sans", sans-serif;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-shadow: 2px 2px 1px rgba(51, 55, 69, 0.6);
+    }
+
+    .pricing-table {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+    }
+
+    .pricing-table .card {
+      width: 220px;
+      height: 370px;
+      padding: 30px;
+      border-radius: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 2px 2px 46px -4px rgba(0, 0, 0, 0.6);
+      transition: all 0.2s ease-in-out;
+    }
+
+    .pricing-table .card:nth-child(1) {
+      background: linear-gradient(to left, #91eae4, #86a8e7, #7f7fd5);
+    }
+
+    .pricing-table .card:nth-child(2) {
+      margin: 0 30px;
+      z-index: 2;
+      width: 250px;
+      height: 400px;
+      background: linear-gradient(to right, #ff4b2b, #ff416c);
+    }
+
+    .pricing-table .card:nth-child(3) {
+      background: linear-gradient(to right, #96c93d, #00b09b);
+    }
+
+    .pricing-table .card:nth-child(1) .price,
+    .pricing-table .card:nth-child(3) .price {
+      font-size: 6rem;
+    }
+
+    .pricing-table .card:nth-child(1) .buy-button,
+    .pricing-table .card:nth-child(3) .buy-button {
+      width: 230px;
+      height: 170px;
+    }
+
+    .pricing-table .card:nth-child(1) .buy-button h3,
+    .pricing-table .card:nth-child(3) .buy-button h3 {
+      top: 12%;
+      left: 10%;
+      font-size: 1rem;
+    }
+
+    .type {
+      margin-top: 30px;
+      letter-spacing: 0.1rem;
+    }
+
+    .price {
+      font-size: 7.5rem;
+      position: relative;
+      margin: 10px 0px 20px;
+      z-index: 2;
+    }
+
+    .price span {
+      font-size: 1.8rem;
+      position: absolute;
+      left: -15%;
+      top: 65%;
+    }
+
+    .plan {
+      font-size: 1.3rem;
+      position: relative;
+      margin-bottom: 10px;
+    }
+
+    .plan::before,
+    .plan::after {
+      position: absolute;
+      content: "";
+      width: 35px;
+      height: 2px;
+      background: #fff;
+      bottom: 40%;
+      transition: all 0.2s ease-out;
+    }
+
+    .plan::before {
+      right: 100%;
+      transform: translate(-50%, -50%);
+    }
+
+    .plan::after {
+      right: -100%;
+      transform: translate(-0%, -50%);
+    }
+
+    .details {
+      text-transform: capitalize;
+    }
+
+    .details li {
+      margin: 15px 0px;
+    }
+
+    .buy-button {
+      cursor: pointer;
+      position: absolute;
+      width: 250px;
+      height: 180px;
+      background: #fff;
+      border-radius: 15%;
+      right: -34%;
+      bottom: -27%;
+      transition: all 0.4s ease-in-out;
+    }
+
+    .buy-button h3 {
+      text-shadow: 0 0 0;
+      text-decoration: none;
+      color: #333745;
+      position: absolute;
+      left: 8%;
+      top: 10%;
+      font-size: 1.2rem;
+      transition: all 0.4s ease-in-out;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+    }
+
+    .card:hover .plan::before {
+      right: 90%;
+    }
+
+    .card:hover .plan::after {
+      right: -90%;
+    }
+
+    .card:hover .buy-button {
+      width: 100%;
+      right: 0%;
+      border-radius: 0%;
+    }
+
+    .card:hover .buy-button h3 {
+      left: 50%;
+      transform: translate(-50%, 0%);
+    }
+  </style>
+</head>
+<body>
+  <section class="pricing-table">
+    <div class="card">
+      <h6 class="type">basic</h6>
+      <div class="price"><span>$</span>20</div>
+      <h5 class="plan">plan</h5>
+      <ul class="details">
+        <li>FREE Stickers</li>
+        <li>FREE Delivery</li>
+        <li>24/7 support</li>
+      </ul>
+      <div class="buy-button">
+        <h3 class="btn">subscribe</h3>
+      </div>
+    </div>
+
+    <div class="card">
+      <h6 class="type">Awesome</h6>
+      <div class="price"><span>$</span>50</div>
+      <h5 class="plan">plan</h5>
+      <ul class="details">
+        <li>FREE Stickers</li>
+        <li>FREE Delivery</li>
+        <li>24/7 support</li>
+      </ul>
+      <div class="buy-button">
+        <h3 class="btn">subscribe</h3>
+      </div>
+    </div>
+
+    <div class="card">
+      <h6 class="type">premium</h6>
+      <div class="price"><span>$</span>100</div>
+      <h5 class="plan">plan</h5>
+      <ul class="details">
+        <li>FREE Stickers</li>
+        <li>FREE Delivery</li>
+        <li>24/7 support</li>
+      </ul>
+      <div class="buy-button">
+        <h3 class="btn">subscribe</h3>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
